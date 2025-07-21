@@ -1,0 +1,340 @@
+
+h1 {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  text-align: center;
+  color: white;
+  letter-spacing: 2px;
+}
+
+body {
+  position: relative;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('/css/bg.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+  min-height: 100vh;
+  padding-top: 160px;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  pointer-events: none;
+  z-index: 0;
+}
+
+body > * {
+  position: relative;
+  z-index: 1;
+}
+
+/* ✅ Cartes */
+.unit-card img {
+  max-width: 100%;
+  height: auto;
+  width: 100px;
+  margin: 0 auto;
+}
+
+.unit-card {
+  background-color: #1f2937;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  border: 2px solid #374151;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+  width: 110px;
+  margin: auto;
+  position: relative;
+}
+
+.unit-card.selected {
+  border-color: #FFD700;
+  box-shadow: 0 0 10px #FFD700;
+  background-color: #3b2f05;
+}
+
+.unit-card.ft {
+  border-color: #a855f7;
+  box-shadow: 0 0 10px #a855f7;
+  background-color: #3b0f53;
+}
+
+.spe-badge {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 22px;
+  height: 22px;
+  background-color: #000000; /* jaune doux */
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.5);
+  border: 2px solid #fff; /* optionnel pour contraste */
+}
+
+.unit-card:hover {
+  transform: scale(1.05);
+}
+
+#unit-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(110px, 1fr));
+  gap: 0.75rem;
+  justify-items: center;
+}
+
+/* ✅ Uniformisation arrondi boutons */
+.mode-button,
+.filter-owned-button,
+#dropdownFilterBtn,
+#dropdownAttributeBtn,
+#dropdownFilterMenu button,
+#dropdownAttributeMenu button {
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+}
+
+/* ✅ Boutons de mode */
+.mode-button.active {
+  box-shadow: 0 0 0 2px white inset;
+  transform: scale(1.05);
+}
+
+.mode-button {
+  background-color: #4b5563;
+  color: white;
+}
+
+.mode-button:hover:nth-of-type(1) { background-color: #2563eb; }
+.mode-button:hover:nth-of-type(2) { background-color: #7e22ce; }
+.mode-button:hover:nth-of-type(3) { background-color: #facc15; color: black; }
+
+.mode-button.active:nth-of-type(1) { background-color: #2563eb; }
+.mode-button.active:nth-of-type(2) { background-color: #7e22ce; }
+.mode-button.active:nth-of-type(3) { background-color: #facc15; color: black; }
+
+/* Style par défaut */
+.filter-owned-button {
+  background-color: #1f2937;
+  color: white;
+  transition: background-color 0.2s, transform 0.2s;
+}
+
+/* Hover pour chaque type */
+.filter-owned-button.all:hover {
+  background-color: #2563eb;
+}
+.filter-owned-button.owned:hover {
+  background-color: #16a34a;
+}
+.filter-owned-button.not-owned:hover {
+  background-color: #dc2626;
+}
+
+.filter-owned-button.active {
+  font-weight: bold;
+  transform: scale(1.02);
+}
+
+/* Quand actif (après clic) */
+.filter-owned-button.active.all {
+  background-color: #2563eb;
+  font-weight: bold;
+}
+.filter-owned-button.active.owned {
+  background-color: #16a34a;
+  font-weight: bold;
+}
+.filter-owned-button.active.not-owned {
+  background-color: #dc2626;
+  font-weight: bold;
+}
+
+.filter-owned-button.all.active {
+  background-color: #2563eb;
+}
+
+.filter-owned-button.owned.active {
+  background-color: #16a34a;
+}
+
+.filter-owned-button.not-owned.active {
+  background-color: #dc2626;
+}
+
+/* ✅ Suppression des effets de contour */
+.filter-owned-button:focus,
+.filter-owned-button:focus-visible,
+.filter-owned-button:focus-within {
+  outline: none !important;
+  box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+
+/* Supprimer les petits points autour des boutons actifs (filtres + affinités) */
+.filter-attribute-button:focus,
+#dropdownAttributeMenu button:focus,
+.filter-attribute-button:focus-visible,
+.filter-attribute-button:focus-within {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* ✅ Unit cards : désaturées si non possédées */
+.unit-card:not(.selected) {
+  filter: brightness(0.4) grayscale(60%);
+  opacity: 0.7;
+  transition: filter 0.2s, opacity 0.2s;
+}
+
+.unit-card.selected {
+  filter: none;
+  opacity: 1;
+}
+
+/* ✅ ProgressBar */
+#progressBar {
+  height: 1rem;
+  border-radius: 0.5rem;
+  transition: width 0.8s ease-in-out;
+  background: linear-gradient(270deg, #a855f7, #7e22ce, #a855f7);
+  background-size: 600% 600%;
+  animation: gradientShift 3s ease infinite;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* ✅ Barre de recherche */
+#searchInput {
+  background-color: #1f2937;
+  color: white;
+  border: 2px solid #374151;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  max-width: 400px;
+}
+
+#searchInput::placeholder {
+  color: #9ca3af;
+}
+
+#searchInput:focus {
+  outline: none;
+  border-color: #a855f7;
+  box-shadow: 0 0 10px #a855f7;
+}
+
+/* ✅ Dropdown menus */
+#dropdownFilterBtn,
+#dropdownAttributeBtn {
+  background-color: #4b5563;
+  color: white;
+}
+
+#dropdownFilterMenu,
+#dropdownAttributeMenu {
+  background-color: #1f2937;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+#dropdownFilterMenu button,
+#dropdownAttributeMenu button {
+  background-color: #1f2937;
+  text-align: left;
+  width: 100%;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+}
+
+#dropdownFilterMenu button:hover,
+#dropdownAttributeMenu button:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+  transform: scale(1.02);
+}
+
+
+/* Supprimer les petits points autour des boutons actifs */
+#dropdownFilterMenu button:focus,
+#dropdownAttributeMenu button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* ✅ Supprime contour blanc (focus ring) sur les boutons d’attributs */
+.filter-attribute-button:focus,
+#dropdownAttributeMenu button:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* ✅ Empêche survol trop visible si actif */
+.filter-attribute-button.active:hover {
+  background-color: #4b5563 !important;
+  transform: none !important;
+}
+
+/* ✅ Optionnel : si toujours du flash visuel, forcer comportement */
+.filter-attribute-button {
+  -webkit-tap-highlight-color: transparent;
+  -moz-outline-style: none;
+}
+
+.filter-owned-button.all.active {
+  background-color: #2563eb !important;
+}
+
+.filter-owned-button.owned.active {
+  background-color: #16a34a !important;
+}
+
+.filter-owned-button.not-owned.active {
+  background-color: #dc2626 !important;
+}
+
+/* ✅ Couleurs actives pour chaque affinité */
+.filter-attribute-button.attr-toutes.active {
+  background-color: #4b5563 !important;
+}
+
+.filter-attribute-button.attr-technique.active {
+  background-color: #16a34a !important;
+}
+
+.filter-attribute-button.attr-instinct.active {
+  background-color: #7e22ce !important;
+}
+
+.filter-attribute-button.attr-force.active {
+  background-color: #dc2626 !important;
+}
+
+.filter-attribute-button.attr-vitesse.active {
+  background-color: #2563eb !important;
+}
+
+.filter-attribute-button.attr-connaissance.active {
+  background-color: #ca8a04 !important;
+}
+
