@@ -4043,7 +4043,7 @@ const units = [
   {
     id: 578,
     name: "Ggio",
-    attribute: "Force",
+    attribute: "Technique",
     rarity: "6★",
     image: baseImageUrl + "578.png"
   },
