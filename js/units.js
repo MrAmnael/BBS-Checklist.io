@@ -5450,7 +5450,7 @@ const units = [
   {
     id: 779,
     name: "Ichigo",
-    attribute: "Vitesse",
+    attribute: "Connaissance",
     rarity: "6★",
     image: baseImageUrl + "779.png"
   },
