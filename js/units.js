@@ -5461,4 +5461,25 @@ const units = [
     rarity: "6★",
     image: baseImageUrl + "780.png"
   },
+  {
+    id: 781,
+    name: "Ukitake",
+    attribute: "Force",
+    rarity: "6★",
+    image: baseImageUrl + "781.png"
+  },
+  {
+    id: 782,
+    name: "Renji",
+    attribute: "Technique",
+    rarity: "6★",
+    image: baseImageUrl + "782.png"
+  },
+  {
+    id: 783,
+    name: "Uryu",
+    attribute: "Instinct",
+    rarity: "6★",
+    image: baseImageUrl + "783.png"
+  },
 ];
