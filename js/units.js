@@ -5482,4 +5482,18 @@ const units = [
     rarity: "6★",
     image: baseImageUrl + "783.png"
   },
+ {
+    id: 784,
+    name: "Rangiku",
+    attribute: "Connaissance",
+    rarity: "6★",
+    image: baseImageUrl + "784.png"
+  },
+ {
+    id: 785,
+    name: "Nelliel",
+    attribute: "Force",
+    rarity: "6★",
+    image: baseImageUrl + "785.png"
+  },
 ];
