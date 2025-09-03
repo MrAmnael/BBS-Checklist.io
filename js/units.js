@@ -5496,4 +5496,25 @@ const units = [
     rarity: "6★",
     image: baseImageUrl + "785.png"
   },
+  {
+    id: 786,
+    name: "Ninny",
+    attribute: "Force",
+    rarity: "6★",
+    image: baseImageUrl + "786.png"
+  },
+  {
+    id: 787,
+    name: "Noel",
+    attribute: "Vitesse",
+    rarity: "6★",
+    image: baseImageUrl + "787.png"
+  },
+  {
+    id: 788,
+    name: "Macy",
+    attribute: "Technique",
+    rarity: "6★",
+    image: baseImageUrl + "788.png"
+  },
 ];
