@@ -2782,7 +2782,7 @@ const units = [
   },
   {
     id: 398,
-    name: "Yoruichi",
+    name: "Soi Fon",
     attribute: "Force",
     rarity: "6★",
     image: baseImageUrl + "398.png"
