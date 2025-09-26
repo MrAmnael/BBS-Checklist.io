@@ -5522,13 +5522,13 @@ const units = [
     name: "Rukia",
     attribute: "Connaissance",
     rarity: "6★",
-    image: baseImageUrl + "788.png"
+    image: baseImageUrl + "789.png"
   },
   {
     id: 790,
     name: "Orihime",
     attribute: "Vitesse",
     rarity: "6★",
-    image: baseImageUrl + "788.png"
+    image: baseImageUrl + "790.png"
   },
 ];
