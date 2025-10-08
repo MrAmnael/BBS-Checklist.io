@@ -5,7 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="icon" type="image/png" href="./favicon/icon.png">
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
-  <link rel="icon" type="image/png" sizes="512x512" href="icons/.png">
   <link rel="manifest" href="manifest.json">
   <title>BBS Checklist</title>
 
@@ -73,14 +72,27 @@
       <p id="progressLabel" class="text-sm text-gray-300 mt-1 text-right">0/0 (0%)</p>
     </div>
 
-    <!-- 📌 Boutons d'action -->
+        <!-- 📌 Boutons d'action -->
     <div class="mb-6 flex flex-wrap justify-center gap-2">
       <button onclick="setMode('default')" class="mode-button text-white px-3 py-1 rounded transition">🖌️ Mode Normal</button>
       <button onclick="setMode('ft')" class="mode-button text-white px-3 py-1 rounded transition">✨ FT Mode</button>
       <button onclick="setMode('spe')" class="mode-button text-white px-3 py-1 rounded transition">🔝 Sp Mode</button>
+      <!-- ✅ Artwork Mode placé à côté -->
+      <button id="toggleArtworkBtn" class="artwork-button text-white px-3 py-1 rounded transition">
+        🎨 Artwork OFF
+      </button>
       <button onclick="exportCollection()" class="bg-gray-800 hover:bg-gray-900 px-3 py-1 rounded">💾 Exporter</button>
       <button onclick="importCollection()" class="bg-gray-800 hover:bg-gray-900 text-white px-3 py-1 rounded">📥 Importer</button>
       <button onclick="resetAll()" class="bg-gray-800 hover:bg-gray-900 px-3 py-1 rounded">🔄 Réinitialiser</button>
+    </div>
+
+
+    <!-- Modal Artwork -->
+    <div id="artworkModal" class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center hidden z-50">
+      <div class="relative">
+        <button id="closeArtworkModal" class="absolute top-5 right-2 text-white text-2xl font-bold z-50">&times;</button>
+        <img id="artworkModalImg" src="" alt="Artwork" class="max-w-full max-h-screen rounded shadow-lg">
+      </div>
     </div>
 
     <!-- 🔍 Menus déroulants + barre de recherche -->
