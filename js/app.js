@@ -140,7 +140,7 @@ function buildCards() {
     overlay.addEventListener("click", (e) => {
       e.stopPropagation();
       const id = parseInt(card.dataset.id, 10);
-      const src = unit.artwork ? unit.artwork : `artwork/artwork/${id}.png`;
+      const src = unit.artwork ? unit.artwork : `artwork/${id}.png`;
 
       if (artworkEnabled) {
         openArtworkModal(src);
