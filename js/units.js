@@ -549,7 +549,7 @@ const units = [
   },
   {
     id: 79,
-    name: "Komamura",
+    name: "Mayuri",
     attribute: "Connaissance",
     rarity: "6★",
     image: baseImageUrl + "079.png"
