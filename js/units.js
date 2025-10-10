@@ -1585,7 +1585,7 @@ const units = [
   },
   {
     id: 227,
-    name: "Shinji",
+    name: "Soi Fon",
     attribute: "Technique",
     rarity: "6★",
     image: baseImageUrl + "227.png"
