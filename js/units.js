@@ -5552,4 +5552,18 @@ const units = [
     rarity: "6★",
     image: baseImageUrl + "793.png"
   },
+   {
+    id: 794,
+    name: "Ichigo",
+    attribute: "Vitesse",
+    rarity: "6★",
+    image: baseImageUrl + "794.png"
+  },
+   {
+    id: 795,
+    name: "Renji",
+    attribute: "Force",
+    rarity: "6★",
+    image: baseImageUrl + "795.png"
+  },
 ];
