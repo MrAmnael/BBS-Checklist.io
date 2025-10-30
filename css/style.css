@@ -437,3 +437,96 @@ body > * {
 .affinity-btn.active-connaissance {
   background-color: #f39c12; /* Orange */
 }
+
+/* ✅ Ajustements pour affichage mobile */
+@media screen and (max-width: 768px) {
+
+  /* Évite le défilement horizontal */
+  body {
+    overflow-x: hidden;
+    padding-top: 120px; /* réduit l’espace du haut sur mobile */
+    background-attachment: scroll; /* évite le bug de fond fixe sur mobile */
+  }
+
+  h1 {
+    font-size: 2rem;
+    line-height: 1.2;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  /* Boutons de mode / FT / SP / Artwork */
+  .mode-button,
+  #toggleArtworkBtn {
+    width: 45%;
+    margin: 4px 0;
+    font-size: 0.85rem;
+    padding: 6px 8px;
+  }
+
+  /* Regroupe les boutons en deux colonnes centrées */
+  .mode-buttons,
+  .export-buttons,
+  .filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+  }
+
+  /* Boutons Exporter / Importer / Réinitialiser */
+  #exportBtn,
+  #importBtn,
+  #resetBtn {
+    width: 45%;
+    font-size: 0.85rem;
+    padding: 6px 8px;
+  }
+
+  /* Zone de recherche + filtre */
+  #search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+  }
+
+  #searchInput {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+
+  #filter-button {
+    width: auto;
+    font-size: 0.9rem;
+  }
+
+  /* Grille des cartes : 3 colonnes sur mobile */
+  #unit-list {
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 0.5rem;
+  }
+
+  .unit-card {
+    width: 90px;
+    padding: 0.4rem;
+  }
+
+  .unit-card img {
+    width: 80px;
+  }
+
+  /* Popup de personnage */
+  .popup-content {
+    width: 90vw !important;
+    height: auto !important;
+    max-height: 90vh;
+  }
+
+  .popup-content img {
+    max-width: 100%;
+    height: auto;
+  }
+}
