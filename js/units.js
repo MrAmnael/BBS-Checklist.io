@@ -5566,4 +5566,25 @@ const units = [
     rarity: "6★",
     image: baseImageUrl + "795.png"
   },
+  {
+    id: 796,
+    name: "Nemu",
+    attribute: "Vitesse",
+    rarity: "6★",
+    image: baseImageUrl + "796.png"
+  },
+    {
+    id: 797,
+    name: "Nanao",
+    attribute: "Force",
+    rarity: "6★",
+    image: baseImageUrl + "797.png"
+  },
+    {
+    id: 798,
+    name: "Yachiru",
+    attribute: "Instinct",
+    rarity: "6★",
+    image: baseImageUrl + "798.png"
+  },
 ];
