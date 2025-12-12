@@ -5615,4 +5615,25 @@ const units = [
     rarity: "6★",
     image: baseImageUrl + "802.png"
   },
+  {
+    id: 803,
+    name: "Meninas",
+    attribute: "Force",
+    rarity: "6★",
+    image: baseImageUrl + "803.png"
+  },
+    {
+    id: 804,
+    name: "Giselle",
+    attribute: "Instinct",
+    rarity: "6★",
+    image: baseImageUrl + "804.png"
+  },
+    {
+    id: 805,
+    name: "Bazz-B",
+    attribute: "Technique",
+    rarity: "6★",
+    image: baseImageUrl + "805.png"
+  },
 ];
