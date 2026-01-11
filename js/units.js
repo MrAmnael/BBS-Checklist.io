@@ -5657,4 +5657,11 @@ const units = [
     rarity: "6★",
     image: baseImageUrl + "808.png"
   },
+    {
+    id: 809,
+    name: "Kon",
+    attribute: "Vitesse",
+    rarity: "6★",
+    image: baseImageUrl + "809.png"
+  },
 ];
