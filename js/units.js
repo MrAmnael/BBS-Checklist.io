@@ -5678,4 +5678,18 @@ const units = [
     rarity: "6★",
     image: baseImageUrl + "811.png"
   },
+  {
+    id: 812,
+    name: "Ichigo",
+    attribute: "Force",
+    rarity: "6★",
+    image: baseImageUrl + "812.png"
+  },
+  {
+    id: 813,
+    name: "Uryu",
+    attribute: "Force",
+    rarity: "6★",
+    image: baseImageUrl + "813.png"
+  },
 ];
