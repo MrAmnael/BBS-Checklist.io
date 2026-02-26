@@ -5700,7 +5700,7 @@ const units = [
     image: baseImageUrl + "814.png"
   },
     {
-    id: 814,
+    id: 815,
     name: "Yachiru",
     attribute: "Vitesse",
     rarity: "6★",
