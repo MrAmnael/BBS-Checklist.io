@@ -5692,4 +5692,32 @@ const units = [
     rarity: "6★",
     image: baseImageUrl + "813.png"
   },
+    {
+    id: 814,
+    name: "Rukia",
+    attribute: "Instinct",
+    rarity: "6★",
+    image: baseImageUrl + "814.png"
+  },
+    {
+    id: 814,
+    name: "Yachiru",
+    attribute: "Vitesse",
+    rarity: "6★",
+    image: baseImageUrl + "815.png"
+  },
+    {
+    id: 816,
+    name: "Jugram",
+    attribute: "Force",
+    rarity: "6★",
+    image: baseImageUrl + "816.png"
+  },
+    {
+    id: 817,
+    name: "Bazz-B",
+    attribute: "Instinct",
+    rarity: "6★",
+    image: baseImageUrl + "817.png"
+  },
 ];
